@@ -131,7 +131,7 @@ VSCODEのワークスペースを作成・保存して、アクセスしたいIR
 
 ## 使用
 
-ここまでの作業を行ったフォルダをxxxに保存してありますので、ご利用ください。git cloneした後に、フォルダ内の.code-workspace.code-workspaceをワークスペースとして開いて使用します。
+ここまでの作業を行ったフォルダを[GitHub](https://github.com/IRISMeister/iris-server-side-search)で公開してありますので、ご利用ください。git cloneした後に、フォルダ内の.code-workspace.code-workspaceをワークスペースとして開いて使用します。
 
 うまく設定が出来ていれば、Exploreに下記のようなフォルダが表示されます。
 
