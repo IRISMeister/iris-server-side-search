@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "local:scdemo",
+			"uri": "isfs://local:scdemo/",
+		},
+		{
+			"name": "local:samples",
+			"uri": "isfs://local:samples/"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"objectscript.showExplorer": false,
+		"intersystems.servers": {
+			"local": {
+				"webServer": {
+					"scheme": "http",
+					"host": "localhost",
+					"port": 52773
+				},
+				"username": "SuperUser"
+			}
+		}
+	}
+}
