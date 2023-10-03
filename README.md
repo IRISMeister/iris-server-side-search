@@ -28,12 +28,12 @@ VSCODE拡張には、Cache'/IRISスタジオの「ファイルから検索」と
 
 使用中のバージョンは、下記で確認できます。
 
-![](images\version.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/version.png?raw=true)
 
 この例では2.10.3ですので、[2.10.4-beta.1](https://github.com/intersystems-community/vscode-objectscript/releases/download/v2.10.4-beta.1/vscode-objectscript-2.10.4-beta.1.vsix
 )をダウンロードし、ダウンロードされたファイル(拡張子vsix)を、Extentionsにドラッグ＆ドロップします。
 
-![](images\dd.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/dd.png?raw=true)
 
 再起動を促されますので、vscodeを再起動します。
 
@@ -73,7 +73,7 @@ Command Paletteで"Preferences: Configure Runtime Arguments"を選択し、下�
 
 有効化されると、OUTPUT(ObjectScript)に下記のようなメッセージが表示されるようになります。
 
-![](images\output.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/output.png?raw=true)
 
 ## VSCODEのワークスペースを作成・保存
 
@@ -135,7 +135,7 @@ VSCODEのワークスペースを作成・保存して、アクセスしたいIR
 
 うまく設定が出来ていれば、Exploreに下記のようなフォルダが表示されます。
 
-![](images\folder.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/folder.png?raw=true)
 
 この時点で、各フォルダをクリックすれば、IRISサーバ内の要素がツリー表示され、編集、保存(コンパイル)可能になっているはずです。
 
@@ -143,22 +143,22 @@ VSCODEのワークスペースを作成・保存して、アクセスしたいIR
 
 肝心のサーチ機能ですが、Control+シフト+Fを押してファイルサーチ機能を開いてください。普通にvscodeでファイルサーチを行う要領で、サーチワードを入力すると、ヒットした対象が列挙されます。大量にヒットした場合、(画像のように)Collapse Allアイコンで全体を折りたたんで、まずはヒット件数表示すると良いかもしれません。 
 
-![](images\hits.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/hits.png?raw=true)
 
 files to includeにフォルダ指定するのと同じ要領で、フィルタ設定すると、サーチ対象もフィルタされます。
 
 EnsLibパッケージを対象にする場合。
 
-![](images\filter.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/filter.png?raw=true)
 
 ワイルドカードを含む場合。
 
-![](images\filter-pkg.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/filter-pkg.png?raw=true)
 
 MACのみを対象にする場合。
 
-![](images\filter-mac.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/filter-mac.png?raw=true)
 
 名前が分かっている場合は、Quick Open機能を使用できます。フォルダツリーを使って、大量に存在するクラスやルーチンの中から、編集対象をピックアップするのが大変な時に役立ちます。
 
-![](images\quickopen.png)
+![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/quickopen.png?raw=true)
