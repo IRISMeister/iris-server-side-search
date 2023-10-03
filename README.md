@@ -1,19 +1,19 @@
 ﻿
-# VSCODEサーバサイド編集のサーチ機能を有効化する
+# VSCodeサーバサイド編集のサーチ機能を有効化する
 
 > こちらの内容は、今後のリリースにより変わる(不要になる)可能性があります。
 
-バージョン2023.2以降で、IRISスタジオが[非推奨](https://jp.community.intersystems.com/node/541666)となったこともあり、VSCODE拡張機能を評価される方も今後増えるかと思います。
+バージョン2023.2以降で、IRISスタジオが[非推奨](https://jp.community.intersystems.com/node/541666)となったこともあり、VSCode拡張機能を評価される方も今後増えるかと思います。
 
 既存のCache'資産をお持ちで、ソース管理をソースコントロールフックで実施されている方などにおかれましては、その際にサーバサイド編集を選択される方もおられるかと思います。
 
-VSCODE拡張には、Cache'/IRISスタジオの「ファイルから検索」と同じ要領でサーチを行いたいというご要望に応えるための機能が備わっています。その[導入方法](https://github.com/intersystems-community/vscode-objectscript#enable-proposed-apis)が、VSCODEの未公開APIを使用している関係で、ひと手間かかるものとなっているため、解説します。
+VSCode拡張には、Cache'/IRISスタジオの「ファイルから検索」と同じ要領でサーチを行いたいというご要望に応えるための機能が備わっています。その[導入方法](https://github.com/intersystems-community/vscode-objectscript#enable-proposed-apis)が、VSCodeの未公開APIを使用している関係で、ひと手間かかるものとなっているため、解説します。
 
 > 方法は複数ありますが、手順を簡素化するべく、なるべくGUIを使わない方法をご紹介しています。
 
 # 導入方法
 
-サーバサイドのサーチ機能は、VSCODEの["Proposed API"](https://code.visualstudio.com/api/advanced-topics/using-proposed-api)であるTextSearchProvider,FileSearchProvideを使用しています。
+サーバサイドのサーチ機能は、VSCodeの["Proposed API"](https://code.visualstudio.com/api/advanced-topics/using-proposed-api)であるTextSearchProvider,FileSearchProvideを使用しています。
 いずれこれらのAPIが安定化してStableとしてリリースされるまでの措置として、これらを使用している拡張機能はマーケットプレイスからの導入(クリックするだけの簡単インストール)が制限されています。
 
 > サーバサイドのサーチ機能を使用する目的でVisual Studio Code Insidersリリースを使用する必要はないようです。
@@ -24,7 +24,7 @@ VSCODE拡張には、Cache'/IRISスタジオの「ファイルから検索」と
 
 使用中のバージョンの「次のバージョン」のbeta.1をインストールします。
 
-> VSCODE拡張は、日々更新・改良されていますので、常に最新バージョンを保つことをお勧めします。
+> VSCode拡張は、日々更新・改良されていますので、常に最新バージョンを保つことをお勧めします。
 
 使用中のバージョンは、下記で確認できます。
 
@@ -35,7 +35,7 @@ VSCODE拡張には、Cache'/IRISスタジオの「ファイルから検索」と
 
 ![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/dd.png?raw=true)
 
-再起動を促されますので、vscodeを再起動します。
+再起動を促されますので、VSCodeを再起動します。
 
 ## Proposed APIを有効化
 
@@ -75,11 +75,11 @@ Command Paletteで"Preferences: Configure Runtime Arguments"を選択し、下�
 
 ![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/output.png?raw=true)
 
-## VSCODEのワークスペースを作成・保存
+## VSCodeのワークスペースを作成・保存
 
-VSCODEのワークスペースを作成・保存して、アクセスしたいIRIS環境を追加(感覚的にはマウントする感じです)します。
+VSCodeのワークスペースを作成・保存して、アクセスしたいIRIS環境を追加(感覚的にはマウントする感じです)します。
 
-この作業はUIで行っても良いのですが、ここではワークスペースの設定ファイル(.code-workspace.code-workspace)を直接編集する方法をご紹介します。ワークスペースの設定ファイルをVSCODE自身で編集するには、いったん、フォルダとして開き直します。
+この作業はUIで行っても良いのですが、ここではワークスペースの設定ファイル(.code-workspace.code-workspace)を直接編集する方法をご紹介します。ワークスペースの設定ファイルをVSCode自身で編集するには、いったん、フォルダとして開き直します。
 
 編集後の.code-workspace.code-workspaceは下記のようになります。
 ```
@@ -141,7 +141,7 @@ VSCODEのワークスペースを作成・保存して、アクセスしたいIR
 
 >初めてアクセスする場合はパスワードを聞いてきます。以降、The extenstion 'InterSystems Language Server' wants to sign in using InterSystems Server Credentials.と表示されたら、Allowを押して使用するCredential(SupseUser on localなど)を選択してください。この辺りは、通常のサーバサイド編集時の操作と同じです。
 
-肝心のサーチ機能ですが、Control+シフト+Fを押してファイルサーチ機能を開いてください。普通にvscodeでファイルサーチを行う要領で、サーチワードを入力すると、ヒットした対象が列挙されます。大量にヒットした場合、(画像のように)Collapse Allアイコンで全体を折りたたんで、まずはヒット件数表示すると良いかもしれません。 
+肝心のサーチ機能ですが、Control+シフト+Fを押してファイルサーチ機能を開いてください。普通にVSCodeでファイルサーチを行う要領で、サーチワードを入力すると、ヒットした対象が列挙されます。大量にヒットした場合、(画像のように)Collapse Allアイコンで全体を折りたたんで、まずはヒット件数表示すると良いかもしれません。 
 
 ![](https://github.com/IRISMeister/iris-server-side-search/blob/main/images/hits.png?raw=true)
 
